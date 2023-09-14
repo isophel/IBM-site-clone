@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two-Column Flyout Menu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="relative">
+    <button type="button" style="font-family: 'IBM Plex Sans', sans-serif;" class="inline-flex items-center text-sm font-semibold leading-6 text-gray-900" aria-expanded="false" aria-controls="submenu">
+      <span>Solutions</span>
+      <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+      </svg>
+    </button>
+  
+    <!--
+      Flyout menu, show/hide based on flyout menu state.
+  
+      Entering: "transition ease-out duration-200"
+        From: "opacity-0 translate-y-1"
+        To: "opacity-100 translate-y-0"
+      Leaving: "transition ease-in duration-150"
+        From: "opacity-100 translate-y-0"
+        To: "opacity-0 translate-y-1"
+    -->
+
+    <!-- This is the second menu -->
+    <div class="absolute  mt-5 -translate-x-2/2 px-4">
+      <div class="flex-auto overflow-hidden bg-white text-sm leading-6">
+        <div class="p-4">
+          <div class="group relative flex gap-x-6 rounded-lg p-4 ">
+            <div class="flex-1 hover:bg-gray-150">
+              
+              <a href="#" style="font-family: 'IBM Plex Sans', sans-serif;" class="font-semibold text-gray-900 " >
+                Analytics
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+            <div class="border-l border-gray-300 pl-6">
+              <a href="#" style="font-family: 'IBM Plex Sans', sans-serif;" class="font-semibold text-gray-900">
+                Featured
+                <span class="absolute inset-0"></span>
+                </a>
+                <br/><br/>
+                <div style="font-family: 'IBM Plex Sans', sans-serif;" class="pl-6 grid grid-cols-3  gap-4 ">
+                  <div class="px-4 flex flex-col justify-center hover:bg-gray-200">
+    
+                    <a href="#" style="font-family: 'IBM Plex Sans', sans-serif;" class="font-semibold text-gray-900">
+                      Analytics
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p style="font-family: 'IBM Plex Sans', sans-serif;" class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+            
+                  </div>
+                  <div style="font-family: 'IBM Plex Sans', sans-serif;" class="px-4 flex flex-col justify-center">
+                    <a href="#" class="font-semibold text-gray-900">
+                      Analyticsdd
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                  </div>
+                  <div class="px-4 flex flex-col justify-center">
+                    <a href="#" class="font-semibold text-gray-900">
+                      Analytics34
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                  </div>
+                  <div class="px-4 flex flex-col justify-center">
+                    <a href="#" class="font-semibold text-gray-900">
+                      Analytics
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                  </div>
+                  <div class="px-4 flex flex-col justify-center">
+                    <a href="#" class="font-semibold text-gray-900">
+                      Analyticsdd
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                  </div>
+                  <div class="px-4 flex flex-col justify-center">
+                    <a href="#" class="font-semibold text-gray-900">
+                      Analytics34
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                  </div>
+                  <div class="px-4 flex flex-col justify-center">
+                    <a href="#" class="font-semibold text-gray-900">
+                      Analytics
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                  </div>
+                  <div class="px-4 flex flex-col justify-center">
+                    <a href="#" class="font-semibold text-gray-900">
+                      Analyticsdd
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                  </div>
+                  <div class="px-4 flex flex-col justify-center">
+                    <a href="#" class="font-semibold text-gray-900">
+                      Analytics34
+                      <span class="absolute inset-0"></span>
+                    </a>
+                    <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                  </div>
+                </div>
+            </div>
+    
+          </div>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.relative').on('click', function() {
+        $('.absolute').toggleClass('hidden');
+      });
+    });
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+          sans: ['IBM Plex Sans', 'sans-serif']
+    },
+        }
+      }
+    }
+  </script>
+</body>
+</html>
